@@ -10,34 +10,52 @@ const portfolioImages = [
   {
     src: '/assets/IMG-20250816-WA0043.jpg',
     alt: 'Tarak Md Shabbir - Professional Fashion Model',
-    category: 'Fashion'
+    category: 'Fashion',
+    width: 800,
+    height: 1200,
+    priority: false
   },
   {
     src: '/assets/IMG-20250816-WA0046.jpg',
     alt: 'Tarak Md Shabbir - Portrait Photography',
-    category: 'Portrait'
+    category: 'Portrait',
+    width: 800,
+    height: 1200,
+    priority: false
   },
   {
     src: '/assets/IMG_20250816_132950.jpg',
     alt: 'Tarak Md Shabbir - Editorial Fashion',
-    category: 'Editorial'
+    category: 'Editorial',
+    width: 800,
+    height: 1200,
+    priority: false
   },
   {
     src: '/assets/IMG-20250816-WA0033.jpg',
     alt: 'Tarak Md Shabbir - Commercial Modeling',
-    category: 'Commercial'
+    category: 'Commercial',
+    width: 800,
+    height: 1200,
+    priority: false
   },
   {
     src: '/assets/06c6eebf-1992-44b6-a0ae-b9f7eff715b0~1.jpg',
     alt: 'Tarak Md Shabbir - Fashion Photography',
-    category: 'Fashion'
+    category: 'Fashion',
+    width: 800,
+    height: 1200,
+    priority: false
   },
   {
     src: '/assets/8e5f0c37-5793-49f9-b29a-fba75b9b28d2~1.jpg',
     alt: 'Tarak Md Shabbir - Studio Portrait',
-    category: 'Portrait'
+    category: 'Portrait',
+    width: 800,
+    height: 1200,
+    priority: false
   }
-]
+] as const
 
 const categories = ['All', 'Fashion', 'Portrait', 'Editorial', 'Commercial']
 
@@ -202,6 +220,10 @@ const PortfolioGallery = () => {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-6 left-6 text-white">

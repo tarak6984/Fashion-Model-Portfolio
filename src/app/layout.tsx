@@ -32,6 +32,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Performance optimizations */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        
+        {/* Preload critical assets */}
+        <link
+          rel="preload"
+          href="/assets/mrexplorer15_7549987260339539218-no-watermark.mp4"
+          as="video"
+          type="video/mp4"
+        />
+        <link
+          rel="preload"
+          href="/assets/IMG-20250816-WA0043.jpg"
+          as="image"
+        />
+      </head>
       <body className="bg-white text-primary-900 font-sans antialiased">
         <div className="min-h-screen">
           {children}
