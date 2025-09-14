@@ -100,7 +100,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="absolute -bottom-6 -right-6 glass-effect p-6 rounded-xl text-center backdrop-blur-lg bg-white/90 border border-white/20 shadow-xl"
               >
-                <div className="text-2xl font-bold text-primary-900 mb-1">6'2"</div>
+                <div className="text-2xl font-bold text-primary-900 mb-1">6&apos;2&quot;</div>
                 <div className="text-sm text-primary-600 font-medium">Height</div>
               </motion.div>
             </div>
@@ -183,7 +183,7 @@ const AboutSection = () => {
                   }
                 }}
               >
-                Let's Work Together
+                Let&apos;s Work Together
               </motion.button>
             </motion.div>
           </motion.div>

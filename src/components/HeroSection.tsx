@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Menu, X, Play, Pause, Volume2, VolumeX } from 'lucide-react'
+import Image from 'next/image'
 
 const HeroSection = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -69,10 +70,12 @@ const HeroSection = () => {
         >
           <source src="/assets/mrexplorer15_7549987260339539218-no-watermark.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
-          <img 
+          <Image
             src="/assets/IMG-20250816-WA0043.jpg" 
             alt="Tarak Md Shabbir - Fashion Model"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </video>
         <div className="absolute inset-0 hero-gradient" />

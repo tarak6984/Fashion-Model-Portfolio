@@ -94,7 +94,7 @@ const ContactSection = () => {
             variants={itemVariants}
             className="text-4xl lg:text-6xl font-serif font-bold mb-6"
           >
-            LET'S CREATE
+            LET&apos;S CREATE
             <br />
             <span className="text-primary-300">TOGETHER</span>
           </motion.h2>
@@ -106,7 +106,7 @@ const ContactSection = () => {
             variants={itemVariants}
             className="text-lg text-primary-100 max-w-2xl mx-auto leading-relaxed"
           >
-            Ready to bring your vision to life? I'm available for collaborations, 
+            Ready to bring your vision to life? I&apos;m available for collaborations,
             fashion shoots, brand partnerships, and creative projects worldwide.
           </motion.p>
         </motion.div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -69,17 +69,17 @@ const PortfolioGallery = () => {
     }
   }
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (selectedImage !== null && filteredImages.length > 0) {
       setSelectedImage((selectedImage + 1) % filteredImages.length)
     }
-  }
+  }, [selectedImage, filteredImages.length])
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (selectedImage !== null && filteredImages.length > 0) {
       setSelectedImage(selectedImage === 0 ? filteredImages.length - 1 : selectedImage - 1)
     }
-  }
+  }, [selectedImage, filteredImages.length])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -100,7 +100,7 @@ const PortfolioGallery = () => {
 
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [selectedImage, filteredImages.length])
+  }, [selectedImage, nextImage, prevImage])
 
   const containerVariants = {
     hidden: { opacity: 0 },
